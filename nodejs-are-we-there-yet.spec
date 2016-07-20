@@ -9,8 +9,8 @@
 %global enable_tests 0
 
 Name:		%{?scl_prefix}nodejs-are-we-there-yet
-Version:	1.0.4
-Release:	4%{?dist}
+Version:	1.0.6
+Release:	2%{?dist}
 Summary:	Keep track of the overall completion of many dispirate processes
 Url:		https://github.com/iarna/are-we-there-yet
 Source0:	https://registry.npmjs.org/%{npm_name}/-/%{npm_name}-%{version}.tgz
@@ -68,9 +68,12 @@ cp -pr package.json *.js \
 %files
 %{nodejs_sitelib}/are-we-there-yet
 
-%doc README.md
+%doc README.md LICENSE
 
 %changelog
+* Thu Jun 09 2016 Zuzana Svetlikova <zsvetlik@redhat.com> - 1.0.6-2
+- Resolves: rhbz#1334856 , fixes wrong license, update
+
 * Sun Feb 14 2016 Zuzana Svetlikova <zsvetlik@redhat.com> - 1.0.4-4
 - Add %%nodejs_fixdep macro
 
